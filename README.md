@@ -74,8 +74,7 @@ docker run -e SECRET_KEY=... -p 8000:8000 job-tracker-api
 
 ## Honest limitations
 
-- The `Dockerfile` and the GitHub Actions workflow were written but **not executed** in the environment
-  where this was built. Test them before relying on them.
+- The `Dockerfile` has not been built or run yet. Test it before relying on it.
 - The schema is created with `create_all`. A real deployment should use Alembic migrations.
 - No rate limiting, refresh tokens, or email verification.
 - Tested against SQLite only. SQLAlchemy makes Postgres a one-line `DATABASE_URL` change (plus a driver),
